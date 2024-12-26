@@ -13,6 +13,8 @@
 // import { LightBulbIcon } from "./Icons";
 // import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
+import PopComponent from "./PopComponent";
+
 // export const HeroCards = () => {
 //   return (
 //     <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
@@ -175,38 +177,11 @@
 //   );
 // };
 
-import * as Dialog from "@radix-ui/react-dialog";
 
 export const HeroCards = () => {
   return (
     <div className="lg:flex flex-row flex-wrap gap-8 relative w-100% h-100%">
-      {/* Dialog Popup */}
-      <Dialog.Root defaultOpen>
-        <Dialog.Portal>
-          <Dialog.Overlay className="fixed inset-0 bg-black/50 z-50" />
-          <Dialog.Content
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                       bg-white rounded-lg shadow-xl p-6 w-[90%] max-w-md z-50"
-          >
-            {/* <Dialog.Title className="text-xl font-semibold">Welcome to Our Website!</Dialog.Title>
-            <Dialog.Description className="text-muted-foreground mt-2">
-              Discover our amazing services and features. Please close this popup to continue exploring.
-            </Dialog.Description> */}
-            <img src="/Housing-pop-up.jpg" alt="Housing Information" className="mt-4 w-full rounded-lg" />
-            <div className="mt-4 flex justify-end">
-              <Dialog.Close asChild>
-                <button
-                  className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90"
-                >
-                  Close
-                </button>
-              </Dialog.Close>
-            </div>
-          </Dialog.Content>
-        </Dialog.Portal>
-      </Dialog.Root>
-
-      {/* Other Cards */}
+    <PopComponent/>
       <img src="/ios-support1-removebg-preview.png" alt="" className="w-80 h-80 lg:ml-20 lg:mt-20" />
     </div>
   );
